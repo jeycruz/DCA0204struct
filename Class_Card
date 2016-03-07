@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+class Card{
+    public:
+    string np;
+    int valor;
+    string str;
+    char str1[10];
+    Card (int naipe, int valor){
+        if(naipe ==0){
+            this->np="H";
+        }
+        if(naipe ==1){
+            this->np="D";
+        }
+        if(naipe ==2){
+            this->np="S";
+        }
+        if(naipe ==3){
+            this->np="C";
+        }
+        this->valor=valor;
+    }
+    string toString(){
+        str=np;
+        
+        str;
+        return str;
+    }
+};
+
+
+int main()
+{
+    Card c0(0,1);
+    Card c1(1,10);
+    Card c2(2,11);
+    Card c3(3,13);
+    cout << "" << c0.toString() << " " << c1.toString() << " "<< c2.toString() << " " << c3.toString();
+
+    return 0;
+}
