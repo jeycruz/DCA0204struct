@@ -28,7 +28,7 @@ class Card{
         this->valor=valor;
     }
     string toString(){
-                str=np;
+        str=np;
         itoa(valor,str1,10);
         str2=str.append(str1);
         return str2;
