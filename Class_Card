@@ -11,6 +11,7 @@ class Card{
     int valor;
     string str;
     char str1[10];
+    string str2;
     Card (int naipe, int valor){
         if(naipe ==0){
             this->np="H";
@@ -27,10 +28,11 @@ class Card{
         this->valor=valor;
     }
     string toString(){
-        str=np;
-        
-        str;
-        return str;
+                str=np;
+        itoa(valor,str1,10);
+        str2=str.append(str1);
+        return str2;
+
     }
 };
 
