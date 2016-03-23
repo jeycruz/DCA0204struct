@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <list>
 #include <cstdio>
+#include <time.h>
 
 using namespace std;
 
@@ -88,11 +89,6 @@ class Deck
         return rest.str();
     }
 
-
-
-
-
-
     Card draw(){
         Card x(0,0);
         list<Card>::iterator itr;
@@ -112,10 +108,29 @@ class Deck
 
 
 
+
+    int cut(int n){
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
 };
 
 int main()
 {
+  int randon;
+  srand (time(NULL));
+  randon = rand() % 10 + 1;
   Card c0(0, 1);
   Card c1(1, 10);
   Card c2(2, 11);
@@ -124,13 +139,30 @@ int main()
     Deck d;
     //cout << d.toString() << endl;
 
-    cout << "Drawn cards: " << endl;
+    /*cout << "Drawn cards: " << endl;
     for(int k=0;k< 52;k++){
         Card cx=d.draw();
         cout << cx.toString() << " ";
-    }
+    }*/
     cout << endl;
+
+
+
+    //cut(randon);
+
+
+
+
+
+
+
+
+
+
+
+
   return 0;
 }
+
 
 
