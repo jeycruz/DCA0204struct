@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <list>
+#include <cstdio>
 
 using namespace std;
 
@@ -41,7 +42,7 @@ class Card {
 class Deck
 {
   private:
-    std::list<Card> cl;
+   list<Card> cl;
   public:
     Deck() {
       int i  = 1;
@@ -86,9 +87,32 @@ class Deck
         }
         return rest.str();
     }
-    Card draw();
-};
 
+
+
+
+
+
+    Card draw(){
+        Card x(0,0);
+        list<Card>::iterator itr;
+        if(!cl.empty()){
+            x = cl.front();
+            cl.pop_front();
+            return (x);
+        }
+        else{
+            cout << "Null" << endl;
+        }
+        return x;
+    }
+
+
+
+
+
+
+};
 
 int main()
 {
@@ -96,9 +120,17 @@ int main()
   Card c1(1, 10);
   Card c2(2, 11);
   Card c3(3, 13);
-  cout << "" << c0.toString() << " " << c1.toString() << " " << c2.toString() << " " << c3.toString();
+  cout << "" << c0.toString() << " " << c1.toString() << " " << c2.toString() << " " << c3.toString()<<endl;
     Deck d;
-    cout << d.toString() << endl;
+    //cout << d.toString() << endl;
+
+    cout << "Drawn cards: " << endl;
+    for(int k=0;k< 52;k++){
+        Card cx=d.draw();
+        cout << cx.toString() << " ";
+    }
+    cout << endl;
   return 0;
 }
+
 
